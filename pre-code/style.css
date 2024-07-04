@@ -93,5 +93,13 @@ footer {
 }
 
 ::-webkit-scrollbar {
-    width: 0; 
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b;
 }
