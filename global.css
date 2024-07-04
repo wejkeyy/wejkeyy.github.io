@@ -44,4 +44,11 @@ footer {
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 15px;
- }
+    padding: 10px 0;
+    background-color: #131313;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
