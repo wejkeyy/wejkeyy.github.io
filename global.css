@@ -28,6 +28,11 @@ body {
 .project a:hover {
     text-decoration: underline;
 }
+.update{
+    margin-top: -12px;
+    color: #dadada;
+    font-size: 15px;
+}
 
 ::-webkit-scrollbar {
     width: 4px;
