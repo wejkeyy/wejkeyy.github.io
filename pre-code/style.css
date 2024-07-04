@@ -2,15 +2,34 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
+    margin: 0;
     background-color: #131313;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width/height */
 }
+
+.container {
+    flex: 1;
+    padding: 0 20px; /* Adjust inner padding to maintain the content within the body padding */
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     font-size: 30px;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
 }
+
+p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 textarea {
     width: 100%;
     height: 200px;
@@ -30,55 +49,49 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
     color: #fff;
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
 }
+
 strong {
     color: #ff8282;
     font-weight: 800;
 }
-button {
-    background-color: #ff8282; 
-    color: #fff; 
+
+button, .secondary-button {
+    background-color: #ff8282;
+    color: #fff;
     border: none;
-    padding: 12px 24px; 
+    padding: 12px 24px;
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-button:hover {
+button:hover, .secondary-button:hover {
     background-color: #e66464;
 }
 
 .secondary-button {
-    background-color: #ff8282; 
-    color: #fff; 
-    border: none;
-    padding: 12px 24px; 
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-}
-
-.secondary-button:hover {
-    background-color: #ea5050; 
+    margin-left: 10px;
 }
 
 footer {
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 15px;
- }
+    padding: 10px 0;
+    background-color: #131313;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
 
 ::-webkit-scrollbar {
-    width: 4px;
-}
-
-::-webkit-scrollbar-track {
-    background: #131313;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #1b1b1b;
+    width: 0; 
 }
