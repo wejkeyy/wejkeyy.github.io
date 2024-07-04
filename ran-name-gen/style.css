@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 0; /* Remove excessive padding */
+    padding: 0; 
     margin: 0;
     background-color: #131313;
     color: #fff;
@@ -13,8 +13,8 @@ body {
 .container {
     text-align: center;
     flex: 1;
-    padding: 150px; /* Add padding here instead of on body */
-    box-sizing: border-box; /* Ensure padding doesn't affect element size */
+    padding: 150px; 
+    box-sizing: border-box; 
 }
 
 .buttons {
@@ -47,7 +47,14 @@ footer {
     left: 0;
     right: 0;
 }
-
 ::-webkit-scrollbar {
-    width: 0; 
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b;
 }
