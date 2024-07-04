@@ -8,12 +8,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    box-sizing: border-box; /* Ensure padding is included in the element's total width/height */
+    box-sizing: border-box;
 }
 
 .container {
     flex: 1;
-    padding: 0 20px; /* Adjust inner padding to maintain the content within the body padding */
+    padding: 0 20px; 
     text-align: center;
 }
 
@@ -49,7 +49,7 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
     color: #fff;
-    white-space: pre-wrap; /* Preserve line breaks and spaces */
+    white-space: pre-wrap;
 }
 
 strong {
