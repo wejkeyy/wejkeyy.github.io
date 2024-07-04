@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0; /* Remove excessive padding */
+    margin: 0;
+    background-color: #131313;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    flex: 1;
+    padding: 150px; /* Add padding here instead of on body */
+    box-sizing: border-box; /* Ensure padding doesn't affect element size */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    color: #131313;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+footer {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    background-color: #131313;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+}
