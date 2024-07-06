@@ -46,6 +46,7 @@ footer {
     width: 100%;
     left: 0;
     right: 0;
+    border-top: 1px solid #878787;
 }
 ::-webkit-scrollbar {
     width: 4px;
