@@ -51,7 +51,10 @@ footer {
     font-size: 15px;
     padding: 10px 0;
     background-color: #131313;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #878787;
 }
