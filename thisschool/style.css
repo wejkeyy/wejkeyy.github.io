@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    background-color: #131313;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .progress {
+    width: 50%;
+    margin: 20px auto;
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 20px;
+    position: relative;
+  }
+  
+  .progress-bar {
+    background-color: #4CAF50;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b;
+}
+footer {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    background-color: #131313;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #878787;
+}
