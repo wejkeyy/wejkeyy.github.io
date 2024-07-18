@@ -1,44 +1,42 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="https://imgur.com/NoKLZ7E.png">
-<script src="script.js"></script>
-<title>Wejkey</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format HTML - Wejkey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://imgur.com/NoKLZ7E.png">
+    <script src="script.js"></script>
 </head>
 <body>
-    <a href="https://wejkeyy.github.io">Go back home</a>
-    <p>Past your code here, and it will change: <br>
-          <strong><</strong> for <strong>&</strong><strong>lt</strong><br>
-          <strong>></strong> for <strong>&</strong><strong>gt</strong><br>
-          <strong>"</strong> for <strong>&</strong><strong>quot</strong> </p>
-    
-    <form id="htmlForm" onsubmit="formatHTML(event)">
-        <textarea id="htmlCode" name="htmlCode" placeholder="EXAMPLE:   
-<html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <h1>Hello world</h1>
-        <p>Hello hell</p>
-    </body>
-</html>
-" required></textarea>
-        <br>
-        <button type="submit">Format HTML</button>
-        <a href="https://wejkeyy.github.io/pre-code/example-code-html" class="secondary-button">Example</a>
-
-    </form>
-    
-    <h2>Output:</h2>
-    <pre id="formattedCode">
-        <!-- Last update 3.7.2024 -->
-    </pre>
+    <div class="container">
+        <a href="https://wejkeyy.github.io" class="back-link">Go back home</a>
+        <p class="info-text">Paste your code here, and it will format it:<br>
+            <strong>&lt;</strong> in <strong>&amp;lt;</strong><br>
+            <strong>&gt;</strong> in <strong>&amp;gt;</strong><br>
+            <strong>"</strong> in <strong>&amp;quot;</strong></p>
+        
+        <form id="htmlForm" onsubmit="formatHTML(event)">
+            <textarea id="htmlCode" name="htmlCode" placeholder="EXAMPLE:   
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello world&lt;/h1&gt;
+        &lt;p&gt;Hello people&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;" required></textarea>
+            <button type="submit">Format HTML</button>
+            <a href="https://wejkeyy.github.io/pre-code/example-code-html" class="secondary-button">Example</a>
+        </form>
+        
+        <h2>Output:</h2>
+        <pre id="formattedCode" class="output"></pre>
+    </div>
 
     <footer>
-        &copy; 2024 | Made by Wejkey - pls dont copy
+        <a href="https://wejkeyy.github.io/website/">&copy; 2024 | Made by Wejkey - Click</a>
     </footer>
 </body>
 </html>
