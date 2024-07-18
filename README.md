@@ -1,1 +1,6 @@
-I'm not really active here but you can find some projects I'm working on
+# **Latest Changelog**
+Website version: 2.0
+
+> What´s new?
+- Design
+- Fonts
