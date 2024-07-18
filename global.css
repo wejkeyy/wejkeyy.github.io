@@ -1,40 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #131313;
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
     color: #ffffff;
+    overflow-y: scroll;
 }
+
 .container {
-    background-color: #131313; 
+    background-color: rgba(0, 0, 0, 0.67);
     color: #fff; 
-    padding: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+small {
+    font-size: 14px;
+    color: #888;
+}
+
 .project {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 20px;
-    background-color: #1b1b1b;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
 }
+
+.project:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .project h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 28px;
 }
+
 .project a {
     text-decoration: none;
-    color: #007bff;
+    color: #00bcd4;
     font-weight: bold;
+    transition: color 0.3s;
 }
+
 .project a:hover {
+    color: #ff9800;
     text-decoration: underline;
 }
-.update{
+
+.update {
     margin-top: -12px;
-    color: #dadada;
-    font-size: 15px;
-}
-small{
-    font-size: 10px;
+    color: #bbbbbb;
+    font-size: 14px;
 }
 
 ::-webkit-scrollbar {
@@ -49,10 +79,15 @@ small{
     background: #1b1b1b;
 }
 footer {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     padding: 10px 0;
-    background-color: #131313;
-    border-top: 1px solid #878787;
+    background-color: rgba(0, 0, 0, 0.216);
+    border-top: 1px solid #00bcd4;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
 }
