@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    overflow-y: scroll;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.67);
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.month {
+    margin-bottom: 10px;
+    color: #ff9800;
+    font-size: 20px;
+    text-align: left;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    grid-gap: 5px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.square.active {
+    background-color: #00bcd4;
+}
+
+.square.today {
+    background-color: #ff9800;
+}
+
+.square:hover {
+    transform: scale(1.1);
+    background-color: #ff9800;
+}
+
+.day-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #bbb;
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.216);
+    border-top: 1px solid #00bcd4;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b;
+}
