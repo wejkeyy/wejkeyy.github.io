@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gridContainer = document.querySelector('.grid-container');
     const today = new Date();
-    const startOfYear = new Date(today.getFullYear(), 0, 0);
-    const diff = today - startOfYear;
+    const startOfYear = new Date(today.getFullYear(), 0, 1);
+    const diff = today - startOfYear + ((startOfYear.getTimezoneOffset() - today.getTimezoneOffset()) * 60 * 1000);
     const oneDay = 1000 * 60 * 60 * 24;
     const dayOfYear = Math.floor(diff / oneDay);
 
@@ -41,12 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
         gridContainer.appendChild(grid);
     }
 
-    setInterval(() => {
+    function updateSquares() {
         const now = new Date();
-        if (now.getHours() === 0 && now.getMinutes() === 0) {
-            document.querySelector('.square.today').classList.remove('today');
-            document.querySelector('.square.active').classList.remove('active').classList.add('today');
-            document.querySelectorAll('.square')[dayOfYear + 1].classList.add('active');
+        const startOfYear = new Date(now.getFullYear(), 0, 1);
+        const diff = now - startOfYear + ((startOfYear.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+        const oneDay = 1000 * 60 * 60 * 24;
+        const dayOfYear = Math.floor(diff / oneDay);
+
+        document.querySelector('.square.today').classList.remove('today');
+        document.querySelectorAll('.square').forEach((square, index) => {
+            if (index < dayOfYear) {
+                square.classList.add('active');
+                square.classList.remove('today');
+            } else if (index === dayOfYear) {
+                square.classList.add('today');
+                square.classList.remove('active');
+            } else {
+                square.classList.remove('active');
+                square.classList.remove('today');
+            }
+        });
+    }
+
+    function checkMidnight() {
+        const now = new Date();
+        if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+            updateSquares();
         }
-    }, 60000); // Check every minute if the time is midnight
+    }
+
+    updateSquares(); // Initial check
+    setInterval(checkMidnight, 1000); // Check every second if it's midnight
 });
