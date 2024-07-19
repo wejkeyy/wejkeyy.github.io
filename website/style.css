@@ -75,6 +75,10 @@ a{
     text-decoration: none;
     color: #ffffff;
 }
+.a2{
+    text-decoration: none;
+    color: #ff9800;
+}
 ::-webkit-scrollbar {
     width: 4px;
 }
