@@ -70,6 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    updateSquares(); // Initial check
-    setInterval(checkMidnight, 1000); // Check every second if it's midnight
+    updateSquares(); 
+    setInterval(checkMidnight, 1000); 
 });
