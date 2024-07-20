@@ -1,7 +1,7 @@
 function updateHolidayPercentage() {
     var now = new Date();
-    var startOfHolidays = new Date(2024, 5, 29, 0, 0, 0); // 29th Jun r. 2024 o 00:00:00
-    var endOfHolidays = new Date(2024, 8, 2, 0, 0, 0); // 2nd September r. 2024 o 00:00:00
+    var startOfHolidays = new Date(2024, 5, 29, 0, 0, 0); 
+    var endOfHolidays = new Date(2024, 8, 2, 0, 0, 0); 
     var totalHolidayTime = endOfHolidays - startOfHolidays;
     var passedHolidayTime = now - startOfHolidays;
     
