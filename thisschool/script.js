@@ -3,15 +3,23 @@ function updateHolidayPercentage() {
     var startOfHolidays = new Date(2024, 5, 29, 0, 0, 0); 
     var endOfHolidays = new Date(2024, 8, 2, 0, 0, 0); 
     
+    if (now < startOfHolidays) {
+        document.getElementById('percentage').innerHTML = `<p>0% of the holidays have passed.</p>`;
+        document.getElementById('progressBar').style.width = '0%';
+        return;
+    }
+    
+    if (now >= endOfHolidays) {
+        document.getElementById('percentage').innerHTML = `<p>100% of the holidays have passed.</p>`;
+        document.getElementById('progressBar').style.width = '100%';
+        return;
+    }
+    
     var totalHolidayTime = endOfHolidays - startOfHolidays; 
     var passedHolidayTime = now - startOfHolidays; 
     
     var percentage = (passedHolidayTime / totalHolidayTime) * 100;
-    if (percentage > 100) {
-        percentage = 100; 
-    } else if (percentage < 0) {
-        percentage = 0;
-    }
+    percentage = Math.min(Math.max(percentage, 0), 100); 
     
     percentage = percentage.toFixed(2); 
     
